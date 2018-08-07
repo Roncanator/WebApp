@@ -1,0 +1,11 @@
+{%  if lab_list %}
+    <ul>
+    {% for lab in lab_list %}
+        <li>
+            <a href="{%  url 'AdminView:detail' lab.id %}">{{ lab.lab_name }}</a>
+        </li>
+    {% endfor %}
+    </ul>
+    {% else %}
+        <p>No labs available</p>
+{%  endif %}
